@@ -4,7 +4,7 @@ import { PostCard, Container } from "../components/index";
 
 function Home() {
     const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
         databaseService.getPosts().then((post) => {
             setPosts(post.documents);
